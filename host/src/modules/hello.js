@@ -10,9 +10,12 @@ const HelloModule = (props) => {
     mount();  
   }, []);  
 
+  //create a unique key in the window dom object so I can save props there.
   const alias = uuidv4();
   window[alias] = props;
-
+  //pass the key to the app-root of my mfe so it knows where to find the props
+  //the props attribute value is just the key.. not the actual props.  The ng component will need to 
+  //go get them with the key.
   return  <app-root props={alias}></app-root>;
   
 };

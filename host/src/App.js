@@ -26,7 +26,7 @@ export const App = () => (
     <h1>This is the Host!</h1>
     <h2>Remote App:</h2>
     <RemoteWrapper>
-      <Hello></Hello>
+      <Hello name='Props from React'></Hello>
     </RemoteWrapper>
 
     <br />

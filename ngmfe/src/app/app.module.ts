@@ -7,29 +7,21 @@ import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
 import { Injector } from '@angular/core';
 import { HelloComponent } from './hello/hello.component';
+import { HostContext } from './HostContext';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,HelloComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
      
   ])],
-  providers: [],
+  providers: [HostContext],
   bootstrap: [AppComponent],
 })
 export class AppModule {
-//  constructor(private injector: Injector) {
-//  }
-//
-//  ngDoBootstrap() {
-//    const ce = createCustomElement(HelloComponent, {injector: this.injector});
-//    const app = createCustomElement(AppComponent, {injector: this.injector});
-//    customElements.define('app-root', app);
-//    customElements.define('mfe-app-hello', ce);
-// 
-//  }
+
 
 }

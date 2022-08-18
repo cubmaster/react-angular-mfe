@@ -6,6 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 const HelloModule = (props) => {
   // eslint-disable-next-line no-unused-vars
   const ref = useRef(null);
+
+  //runs once with component loads
   useEffect(() => {
     mount();  
   }, []);  
